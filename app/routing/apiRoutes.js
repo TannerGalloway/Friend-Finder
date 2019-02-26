@@ -17,7 +17,6 @@ module.exports = function(api)
         var difference = 0;
         if(friends.length < 1)
         {
-            console.log("You are the first to use the site");
             friends.push(req.body);
             res.json({first: true, message: "You are the first person to use the site."});
             return;
@@ -48,11 +47,5 @@ module.exports = function(api)
         });
             friends.push(req.body);
             res.json({first: false, name: partnerName, image: partnerImage});
-            // console.log("------------");
-            // console.log(newfriendscore);
-            // console.log(scoresResults);
-            // console.log(partnerdiff);
-            // console.log(partnerName);
-            // console.log(partnerImage);
     })
 };
